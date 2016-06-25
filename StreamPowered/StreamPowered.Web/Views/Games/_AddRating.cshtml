@@ -1,0 +1,30 @@
+﻿@model StreamPowered.Web.Models.BindingModels.RatingBindingModel
+
+@using (Ajax.BeginForm("Rate", "Ratings",
+    new { GameId = Model.GameId },
+    new AjaxOptions
+    {
+        UpdateTargetId = "rating-number",
+        InsertionMode = InsertionMode.Replace,
+        OnSuccess = "lockDropDown"
+    }))
+{
+    @Html.AntiForgeryToken();
+
+    <select name="Value" id="select-rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+    <input type="submit" class="btn btn-sm btn-info" />
+}
+
+
+<script>
+    function lockDropDown() {
+        $("#your-rating").html($("#select-rating option:selected").text());
+        $("#form0").css("display", "none");
+    }
+</script>

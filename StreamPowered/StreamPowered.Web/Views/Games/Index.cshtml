@@ -1,0 +1,13 @@
+﻿@model IEnumerable<StreamPowered.Web.Models.ViewModels.GamePreviewModel>
+
+@{
+    ViewBag.Title = "All Games";
+}
+
+<h2>All Games</h2>
+
+<div class="row">
+    @Html.DisplayFor(x => x)
+</div>
+
+@Html.Partial("_Pagination")

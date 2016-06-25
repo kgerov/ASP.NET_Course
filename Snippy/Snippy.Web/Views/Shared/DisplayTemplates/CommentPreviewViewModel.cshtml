@@ -1,0 +1,11 @@
+﻿@model Snippy.Web.Models.ViewModels.CommentPreviewViewModel
+           
+<div class="col-md-12 home-page-commen-box">
+    <div class="col-md-12"><p>@Model.Content</p></div>
+    <div class="col-md-12">
+        <strong>@Model.Username</strong><span> on @Model.CreationTime</span>
+    </div>
+    <div class="col-md-12">
+        <span>on snippet </span><a href="/Snippet/Details/@Model.SnippetId">@Model.SnippetTitle</a>
+    </div>
+</div>

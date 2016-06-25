@@ -1,0 +1,47 @@
+﻿@model Snippy.Web.Models.ViewModels.SnippetViewModel
+@using Microsoft.AspNet.Identity
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h2><a href="/Language/View/@Model.Language.Id" class="btn btn-success">@Model.Language.Name</a> @Model.Title</h2>
+        <p>by <strong>@Model.User</strong> on @Model.CreationTime</p>
+        <p>Labels: @Html.DisplayFor(x => x.Labels)</p>
+        <p>@Model.Description</p>
+    </div>
+    <div class="col-md-12">
+        <div class="code-area">@Model.Code</div>
+    </div>
+    <div class="col-md-12">
+        <h3>Comments</h3>
+            @if (Request.IsAuthenticated)
+            {
+                using (Ajax.BeginForm("Create", "Comment",
+                    new AjaxOptions
+                    {
+                        UpdateTargetId = "snippet-comments",
+                        InsertionMode = InsertionMode.InsertBefore
+                    }))
+                {
+                    @Html.AntiForgeryToken();
+                    
+                    <input type="text" name="content"/>
+                    <input type="hidden" value="@Model.Id" name="snippetId" />
+                    <input type="submit" />
+                }
+            }
+            <div id="snippet-comments">
+                @if (@Model.Comments.Any())
+                {
+                    @Html.DisplayFor(x => x.Comments)
+                }
+                else
+                {
+                    <p>There are no comments right now.</p>
+                }
+            </div>
+    </div>
+</div>

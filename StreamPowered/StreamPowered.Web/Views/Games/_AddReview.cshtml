@@ -1,0 +1,28 @@
+﻿@model StreamPowered.Web.Models.BindingModels.ReviewBindingModel
+@using Microsoft.AspNet.Identity
+ 
+@if (Request.IsAuthenticated)
+{
+    @Html.ValidationSummary()
+    using (Ajax.BeginForm("Create", "Reviews",
+        new { GamePublicationId = Model.GamePublicationId },
+        new AjaxOptions
+        {
+            UpdateTargetId = "game-reviews",
+            InsertionMode = InsertionMode.InsertBefore,
+            OnSuccess = "clearForm"
+        }))
+    {
+        @Html.AntiForgeryToken();
+
+    <textarea class="form-control" rows="5" name="Content" style="max-width: none;" id="review-content"></textarea>
+    <input type="submit" class="btn btn-info" />
+    }
+}
+
+<script>
+    function clearForm() {
+        $("#review-content").val("");
+        $("#no-comment-text").hide();
+    }
+</script>

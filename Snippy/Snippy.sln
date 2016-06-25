@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{CADCC7D2-71E3-47A3-80AA-1AFC26003948}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{73E241CB-4999-493C-9126-8BF2A96F64F1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExternalLibraries", "ExternalLibraries", "{EE08DA27-C78F-4473-BDBE-85688E340DAB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{2839BF2C-0872-4765-BA1F-269A4FCF626E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippy.Web", "Snippy.Web\Snippy.Web.csproj", "{BC7CF8EE-2E35-4904-A091-D39EA238AEA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippy.Data", "Snippy.Data\Snippy.Data.csproj", "{772D74E6-C9CA-47AD-AF66-EC7E39A29279}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippy.Models", "Snippy.Models\Snippy.Models.csproj", "{8AECAAF0-15A7-4914-A6C4-8C61F1530B80}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC7CF8EE-2E35-4904-A091-D39EA238AEA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC7CF8EE-2E35-4904-A091-D39EA238AEA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC7CF8EE-2E35-4904-A091-D39EA238AEA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC7CF8EE-2E35-4904-A091-D39EA238AEA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{772D74E6-C9CA-47AD-AF66-EC7E39A29279}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{772D74E6-C9CA-47AD-AF66-EC7E39A29279}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{772D74E6-C9CA-47AD-AF66-EC7E39A29279}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{772D74E6-C9CA-47AD-AF66-EC7E39A29279}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AECAAF0-15A7-4914-A6C4-8C61F1530B80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AECAAF0-15A7-4914-A6C4-8C61F1530B80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AECAAF0-15A7-4914-A6C4-8C61F1530B80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AECAAF0-15A7-4914-A6C4-8C61F1530B80}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BC7CF8EE-2E35-4904-A091-D39EA238AEA0} = {73E241CB-4999-493C-9126-8BF2A96F64F1}
+		{772D74E6-C9CA-47AD-AF66-EC7E39A29279} = {CADCC7D2-71E3-47A3-80AA-1AFC26003948}
+		{8AECAAF0-15A7-4914-A6C4-8C61F1530B80} = {CADCC7D2-71E3-47A3-80AA-1AFC26003948}
+	EndGlobalSection
+EndGlobal

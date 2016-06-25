@@ -1,0 +1,15 @@
+﻿@model Snippy.Web.Models.ViewModels.SnippetPreviewViewModel
+    
+<div class="row">
+    <div class="col-md-12">
+        <h3><a href="/Snippet/Details/@Model.Id">@Model.Title</a></h3>
+    </div>
+    <div class="col-md-12">
+        @{
+            foreach (var label in @Model.Labels)
+            {
+                <a href="/Label/View/@label.Id" class="btn btn-info">@label.Text</a>
+            }
+        }
+    </div>
+</div>

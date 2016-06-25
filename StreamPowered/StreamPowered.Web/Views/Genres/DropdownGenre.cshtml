@@ -1,0 +1,6 @@
+﻿@model IEnumerable<StreamPowered.Web.Models.ViewModels.GenreViewModel>
+
+@foreach (var genre in @Model)
+{
+    <li><a href="/Genres/Details/@genre.Id">@genre.Name</a></li>
+}

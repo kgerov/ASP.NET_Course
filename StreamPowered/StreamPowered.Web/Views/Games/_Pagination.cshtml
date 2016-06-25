@@ -1,0 +1,19 @@
+﻿@{
+    bool isFirstPage = ViewBag.CurrentPage == 1;
+    bool isLastPage = ViewBag.CurrentPage == ViewBag.MaxPages;
+}
+
+<ul class="pagination">
+    <li class="@(isFirstPage ? "disabled" : "")">
+        <a href=@(isFirstPage ? "#" : "/Games?page=1")>&laquo;</a>
+    </li>
+    @for (int i = 1; i <= ViewBag.MaxPages; i++)
+    {
+        <li class="@(ViewBag.CurrentPage == i ? "active": "")">
+            @Html.ActionLink(i.ToString(), "Index", new { page = i })
+        </li>
+    }
+    <li class="@(isLastPage ? "disabled" : "")">
+        <a href=@(isLastPage ? "#" : "/Games?page=" + ViewBag.MaxPages)>&raquo;</a>
+    </li>
+</ul>

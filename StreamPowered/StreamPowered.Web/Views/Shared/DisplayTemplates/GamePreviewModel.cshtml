@@ -1,0 +1,6 @@
+﻿@model StreamPowered.Web.Models.ViewModels.GamePreviewModel
+
+<div class="col-md-12">
+    <h2><a href="/Games/Details/@Model.Id">@Model.Title</a> <a href="#" class="btn btn-warning">@String.Format("{0:0.00}", Model.Rating)</a></h2>
+    <img src="@Model.Image" alt="" />
+</div>

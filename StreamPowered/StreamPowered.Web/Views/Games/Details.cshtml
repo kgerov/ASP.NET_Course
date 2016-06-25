@@ -1,0 +1,70 @@
+﻿@model StreamPowered.Web.Models.ViewModels.GameViewModel
+@using System.Security.Cryptography
+@using Microsoft.AspNet.Identity
+@using StreamPowered.Web.Models.BindingModels
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2><a href="/Games/Details/@Model.Id">@Model.Title</a> <a href="#" class="btn btn-warning" id="rating-number">@String.Format("{0:0.00}", Model.Rating)</a></h2>
+
+<div class="row game-details-box">
+    <div class="col-md-12">
+        <h3>
+            Genre: <a href="/Genres/Details/@Model.Genre.Id" class="btn btn-info">@Model.Genre.Name</a>
+        </h3>
+    </div>
+    <div class="col-md-12">
+        <div class="rating-box">
+            @if (Request.IsAuthenticated)
+            {
+                <h5>Your rating: </h5>
+                <span id="your-rating"></span>
+                if (@Model.UsersRatings.Select(x => x.Username).Contains(this.User.Identity.Name))
+                {
+                    <span>@Model.UsersRatings.FirstOrDefault(x => x.Username == this.User.Identity.Name).Rating</span>
+                }
+                else
+                {
+                    var ratingBindingModel = new RatingBindingModel() {GameId = Model.Id};
+                    @Html.Partial("_AddRating", ratingBindingModel)
+                }
+            }
+        </div>
+    </div>
+    <div class="col-md-12">
+        <h3>Description:</h3>
+        <p>@Model.Description</p>
+    </div>
+    <div class="col-md-12">
+        <h3>System Requirements: </h3>
+        <p>@Model.SystemRequirements</p>
+    </div>
+    <div class="col-md-12">
+        <h3>Images: </h3>
+        @foreach (var image in @Model.Images)
+        {
+            <img src="@image" />
+        }
+    </div>
+    <div class="col-md-12">
+        <h3>Reviews: </h3>
+        @{
+            var reviewModel = new ReviewBindingModel() {GamePublicationId = Model.Id};
+        }
+
+        @Html.Partial("_AddReview", reviewModel)
+
+        <div id="game-reviews">
+            @if (@Model.Reviews.Any())
+            {
+                @Html.DisplayFor(x => x.Reviews)
+            }
+            else
+            {
+                <p id="no-comment-text">There are currently no reviews</p>
+            }
+        </div>
+    </div>
+</div>

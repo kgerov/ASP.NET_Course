@@ -1,0 +1,13 @@
+D:\OnCode\AspNet\Snippy\Snippy.Models\bin\Debug\Snippy.Models.dll.config
+D:\OnCode\AspNet\Snippy\Snippy.Models\bin\Debug\Snippy.Models.dll
+D:\OnCode\AspNet\Snippy\Snippy.Models\bin\Debug\Snippy.Models.pdb
+D:\OnCode\AspNet\Snippy\Snippy.Models\bin\Debug\EntityFramework.dll
+D:\OnCode\AspNet\Snippy\Snippy.Models\bin\Debug\EntityFramework.SqlServer.dll
+D:\OnCode\AspNet\Snippy\Snippy.Models\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\OnCode\AspNet\Snippy\Snippy.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\OnCode\AspNet\Snippy\Snippy.Models\bin\Debug\EntityFramework.xml
+D:\OnCode\AspNet\Snippy\Snippy.Models\bin\Debug\EntityFramework.SqlServer.xml
+D:\OnCode\AspNet\Snippy\Snippy.Models\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\OnCode\AspNet\Snippy\Snippy.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\OnCode\AspNet\Snippy\Snippy.Models\obj\Debug\Snippy.Models.dll
+D:\OnCode\AspNet\Snippy\Snippy.Models\obj\Debug\Snippy.Models.pdb

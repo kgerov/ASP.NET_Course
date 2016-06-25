@@ -1,0 +1,13 @@
+﻿@model IEnumerable<Snippy.Web.Models.ViewModels.SnippetPreviewViewModel>
+
+@{
+    ViewBag.Title = "All Snippets";
+}
+
+<h2>All Snippets</h2>
+
+<div class="row">
+    @Html.DisplayFor(x => x)
+</div>
+
+@Html.Partial("_Pagination")

@@ -1,0 +1,19 @@
+﻿@model Snippy.Web.Models.ViewModels.CommentViewModel
+@using Microsoft.AspNet.Identity
+
+<div class="col-md-12 home-page-commen-box">
+    <div class="col-md-12">
+        <div class="@(User.Identity.Name == Model.User ? "col-md-11" : "col-md-12")">
+            <p>@Model.Content</p>
+        </div>
+        @if (Model.User == this.User.Identity.Name)
+        {
+            <div class="col-md-1">
+                @Html.ActionLink("X", "DeleteConfirm", "Comment", new { @class = "btn btn-danger" })
+            </div>
+        }
+    </div>
+    <div class="col-md-12">
+        <strong>@Model.User</strong><span> on @Model.CreationTime</span>
+    </div>
+</div>

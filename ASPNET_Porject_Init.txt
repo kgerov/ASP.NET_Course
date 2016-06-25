@@ -1,0 +1,77 @@
+ASP .NET Initialize a Project
+
+1. Create new Blank Solution
+2. Add folders: Data, Web, ExternalLibraries, Tests
+3. In folder Web create a new project: Visual C# > Web > ASP .NET Web Application 
+- named WebsiteName.Web
+- MVC 
+4. Go to NUGET and Update all packages [OPTIONAL]
+5. In folder Data create a new project: Class Library 
+-named WebsiteName.Data
+5. In folder Data create a new project: Class Library 
+-named WebsiteName.Models
+
+6. Move user
+-Go to Models -> IdentityModels.cs
+-Create ApplicationDbContext in Data
+-Cut Db Context from IdentityModels.cs to ApplicationDbContext.cs
+-From NUGET add Microsoft ASP .NET Identity EntityFramework 
+-From NUGET installed packages add EF to Data and Web and Models
+-From NUGET installed packages add Microsoft ASP .NET Identity EntityFramework to Data and Web and Models
+-Cut ApplicationUser from IdentityModels.cs and move it to ApplicationUser.cs in Models
+
+7. Reference
+- Add Models to Data's References
+- Add Models and Data to Web's References
+
+8. Build Project and Add Using's for ApplicationUser
+
+9. Go to Web.Config
+- Change connection string
+Remove AttachDbFileName
+DataSource = .
+Rename Initial Catalog
+
+10. Build Project
+
+11. Go to IdentityConfig.cs in AppStart and change password requirements
+
+12. Go to AccountViewModel.cs, then to LoginViewModel
+and change Email to Username
+In Register add Username
+
+13. Go to AccountController, Login method and Register method
+and change username and email
+
+14. Go to Views for Login and Register and change there too
+
+15. Rename ApplicationUser to User
+
+16. Generate Models and finish Data 
+
+17. Delete IdentityModels.cs file
+
+18. Create Base Controller (Look at GitHub)
+
+19. Manage NuGet Packages and add Ninject.MVC5
+
+20. Configure Ninject from App_Start NinjectWebCommon.cs
+Change RegisterServices method 
+
+21. Fix ViewEngine Performace
+in Global.asax
+add ViewEngineConfig file in App_Start folder
+
+22. Add Glimpse Mvc5
+
+23. Add System.Web.MVC.Expressions
+
+24. Add Microsoft jQuery Unobtrusive Ajax from NUGET 
+after that add it to bundle
+
+25. AutoMapper
+NUGET Packages
+App_Start
+Global.asax
+
+26. Notifications from website

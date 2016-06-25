@@ -1,0 +1,11 @@
+﻿@model StreamPowered.Web.Models.ViewModels.ReviewPreviewModel
+
+<div class="col-md-12">
+    <div class="review-preview-box">
+        <div class="row">
+            <div class="col-md-12"><p>@Model.Content</p></div>
+            <div class="col-md-12"><strong>@Model.User</strong> on @Model.CreationTime</div>
+            <div class="col-md-12">on game <a href="/Games/Details/@Model.GameId">@Model.Game</a></div>
+        </div>
+    </div>
+</div>

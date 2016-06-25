@@ -1,0 +1,20 @@
+﻿@model StreamPowered.Web.Models.ViewModels.GenreDetailsViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>All games in <a href="/Genres/Details/@Model.Id" class="btn btn-info">@Model.Name</a></h2>
+
+<div class="row">
+    @if (@Model.Games.Any())
+    {
+        @Html.DisplayFor(x => x.Games)
+    }
+    else
+    {
+        <p>No games in this category.</p>
+    }
+</div>
+
+
